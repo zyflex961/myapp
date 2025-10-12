@@ -1,35 +1,35 @@
 export async function handler(event) {
-  // Allowed origins (localhost + Netlify)
+  // ✅ Universal allowed origins (localhost + production)
   const allowedOrigins = [
-    'http://localhost:4321', 
-    'http://127.0.0.1:4321', 
+    'http://localhost:4321',
     'http://localhost:8888',
-    'https://walletdps.netlify.app'];
-  const origin = event.headers.origin || '*';
+    'https://walletdps.netlify.app',
+    'https://walletdps.netlify.com',
+  ];
+
+  const origin = event.headers.origin || '';
   const allowOrigin = allowedOrigins.includes(origin) ? origin : '*';
 
-  // Common CORS headers (used everywhere)
-  const corsHeaders = {
-    'Access-Control-Allow-Origin': allowOrigin,
-    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-    'Access-Control-Allow-Headers':
-      'x-app-env, X-App-Env, X-App-Version, X-Requested-With, Content-Type, Authorization, Origin, Accept',
-    'Access-Control-Max-Age': '86400',
-  };
-
-  // Handle preflight OPTIONS
+  // ✅ Handle CORS preflight (OPTIONS)
   if (event.httpMethod === 'OPTIONS') {
     return {
       statusCode: 200,
-      headers: corsHeaders,
+      headers: {
+        'Access-Control-Allow-Origin': allowOrigin,
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers':
+          'X-App-Env, X-App-Version, X-Requested-With, Content-Type, Authorization, Origin, Accept',
+        'Access-Control-Max-Age': '86400',
+      },
       body: '',
     };
   }
 
-  // Build target URL
+  // ✅ Build target URL
   const targetUrl = `https://api.mytonwallet.org${event.path.replace('/.netlify/functions/proxy', '')}`;
 
   try {
+    // ✅ Forward request to external API
     const response = await fetch(targetUrl, {
       method: event.httpMethod,
       headers: {
@@ -39,20 +39,28 @@ export async function handler(event) {
       body: event.body,
     });
 
+    // ✅ Read response body
     const data = await response.text();
 
+    // ✅ Send back the response
     return {
       statusCode: response.status,
       headers: {
-        ...corsHeaders,
+        'Access-Control-Allow-Origin': allowOrigin,
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers':
+          'X-App-Env, X-App-Version, X-Requested-With, Content-Type, Authorization, Origin, Accept',
         'Content-Type': response.headers.get('content-type') || 'application/json',
       },
       body: data,
     };
   } catch (error) {
+    // ✅ Error handler
     return {
       statusCode: 500,
-      headers: corsHeaders,
+      headers: {
+        'Access-Control-Allow-Origin': allowOrigin,
+      },
       body: JSON.stringify({ error: error.message }),
     };
   }
