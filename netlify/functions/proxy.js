@@ -1,18 +1,42 @@
-// netlify/functions/proxy.js
+export async function handler(event) {
+  // Allowed origins (localhost + Netlify)
+  const allowedOrigins = [
+    'http://localhost:4321', 
+    'http://127.0.0.1:4321', 
+    'http://localhost:8888',
+    'https://walletdps.netlify.app'];
+  const origin = event.headers.origin || '*';
+  const allowOrigin = allowedOrigins.includes(origin) ? origin : '*';
 
-import fetch from 'node-fetch';
+  // Common CORS headers (used everywhere)
+  const corsHeaders = {
+    'Access-Control-Allow-Origin': allowOrigin,
+    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+    'Access-Control-Allow-Headers':
+      'x-app-env, X-App-Env, X-App-Version, X-Requested-With, Content-Type, Authorization, Origin, Accept',
+    'Access-Control-Max-Age': '86400',
+  };
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'; // ✅ Ignore self-signed SSL (for dev only)
+  // Handle preflight OPTIONS
+  if (event.httpMethod === 'OPTIONS') {
+    return {
+      statusCode: 200,
+      headers: corsHeaders,
+      body: '',
+    };
+  }
 
-export const handler = async (event) => {
-  const { path } = event;
-  const proxyPath = path.replace('/.netlify/functions/proxy', '');
-  const targetUrl = `https://api.mytonwallet.org${proxyPath}`;
+  // Build target URL
+  const targetUrl = `https://api.mytonwallet.org${event.path.replace('/.netlify/functions/proxy', '')}`;
 
   try {
     const response = await fetch(targetUrl, {
       method: event.httpMethod,
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        ...event.headers,
+        'X-App-Env': event.headers['x-app-env'] || event.headers['X-App-Env'] || 'Production',
+      },
+      body: event.body,
     });
 
     const data = await response.text();
@@ -20,16 +44,16 @@ export const handler = async (event) => {
     return {
       statusCode: response.status,
       headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json',
+        ...corsHeaders,
+        'Content-Type': response.headers.get('content-type') || 'application/json',
       },
       body: data,
     };
   } catch (error) {
-    console.error('Proxy error:', error);
     return {
       statusCode: 500,
+      headers: corsHeaders,
       body: JSON.stringify({ error: error.message }),
     };
   }
-};
+}
