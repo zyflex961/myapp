@@ -168,7 +168,7 @@ export const IFRAME_WHITELIST = [
 
 
 ];
-export const SUBPROJECT_URL_MASK = 'https://*.mytonwallet.io';
+export const SUBPROJECT_URL_MASK = 'https://*.netlify.app';
 
 export const CHANGELLY_SUPPORT_EMAIL = 'zyfflexhub@gmail.com';
 export const CHANGELLY_LIVE_CHAT_URL = 'https://changelly.com/';
