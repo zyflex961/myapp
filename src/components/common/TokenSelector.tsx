@@ -469,7 +469,7 @@ function TokenSelector({
     return (
       <>
         {!shouldHideMyTokens && renderTokenGroup(userTokensWithFilter, lang('MY'), true)}
-        {renderTokenGroup(popularTokensWithFilter, lang('POPULAR'))}
+        {renderTokenGroup(popularTokensWithFilter, lang('🪙 Popular token '))}
       </>
     );
   }
