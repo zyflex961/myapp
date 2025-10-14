@@ -15,7 +15,7 @@ import type { AutolockValueType, LangCode, LangItem, TokenPeriod } from './globa
 export const APP_ENV = process.env.APP_ENV;
 
 export const IS_CORE_WALLET = process.env.IS_CORE_WALLET === '1';
-export const APP_NAME = process.env.APP_NAME || (IS_CORE_WALLET ? 'TON Wallet' : 'My Wallet');
+export const APP_NAME = process.env.APP_NAME || (IS_CORE_WALLET ? 'TON Wallet' : 'Dps Wallet');
 export const APP_VERSION = process.env.APP_VERSION!;
 export const APP_COMMIT_HASH = process.env.APP_COMMIT_HASH!;
 export const APP_ENV_MARKER = APP_ENV === 'staging' ? 'Beta' : APP_ENV === 'development' ? 'Dev' : undefined;
