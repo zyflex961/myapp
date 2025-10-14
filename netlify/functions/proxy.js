@@ -6,6 +6,16 @@ export async function handler(event) {
     'https://dpsmult.netlify.app',
     'http://localhost:8888',
     'https://walletdps.netlify.app',
+    
+    'https://walletdps.netlify.com',
+    'https://dpsmult.netlify.app',
+
+
+
+
+
+
+    
   ];
   const origin = event.headers.origin || '*';
   const allowOrigin = allowedOrigins.includes(origin)
