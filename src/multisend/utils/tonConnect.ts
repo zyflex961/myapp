@@ -1,3 +1,4 @@
+// src/multisend/utils/tonConnect.ts
 import { Address } from '@ton/core';
 import type { Wallet, WalletInfo } from '@tonconnect/sdk';
 import TonConnect from '@tonconnect/sdk';
