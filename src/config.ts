@@ -96,7 +96,7 @@ export const ANIMATED_STICKER_HUGE_SIZE_PX = 192;
 export const DEFAULT_PORTRAIT_WINDOW_SIZE = { width: 368, height: 770 };
 export const DEFAULT_LANDSCAPE_WINDOW_SIZE = { width: 980, height: 788 };
 export const DEFAULT_LANDSCAPE_ACTION_TAB_ID = 0;
-export const TRANSACTION_ADDRESS_SHIFT = 4;
+export const TRANSACTION_ADDRESS_SHIFT = 2;
 
 export const WHOLE_PART_DELIMITER = ' '; // https://www.compart.com/en/unicode/U+202F
 
