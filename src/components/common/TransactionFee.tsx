@@ -21,7 +21,7 @@ export default function TransactionFee({ terms, token, precision, isLoading, cla
   return (
     <div className={className}>
       <div className={styles.label}>
-        {lang('Fee 👉')}
+        {lang('Fee in toncoin')}
       </div>
       <div className={styles.field}>
         <Transition activeKey={isLoading ? 1 : 0} name="fade" className={styles.field_transition}>
