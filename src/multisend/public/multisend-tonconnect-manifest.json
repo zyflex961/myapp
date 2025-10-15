@@ -6,9 +6,9 @@
   "privacyPolicyUrl": "https://dpsmult.netlify.app/privacy",
   "description": "DPS MultiSend allows users to send any TON-based tokens (TON, DPS, USDT, and more) to multiple wallets in one transaction. Built for flexibility, speed, and transparency on the TON blockchain.",
   "developer": {
-    "name": "DPS Wallet Team",
+    "name": "Zyflex",
     "website": "https://walletdps.netlify.app",
-    "email": "support@dpswallet.app"
+    "telegram": "@zyflexhub"
   },
   "permissions": [
     "ton_sendTransaction",
