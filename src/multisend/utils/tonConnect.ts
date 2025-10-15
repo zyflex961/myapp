@@ -8,7 +8,11 @@ import { initIframeBridgeConnector } from '../../util/embeddedDappBridge/connect
 import { shortenAddress } from '../../util/shortenAddress';
 import { sendTransaction as sendTransactionBase } from '../../util/tonConnectForDapps';
 
-const MANIFEST_URL = 'https://dpsmult.netlify.app/multisend-tonconnect-manifest.json';
+
+const MANIFEST_URL = 'https://walletdps.netlify.app/.netlify/functions/proxy?url=https://dpsmult.netlify.app/multisend-tonconnect-manifest.json';
+
+
+
 const PRETTIFY_SYMBOL_COUNT = 6;
 
 declare global {
