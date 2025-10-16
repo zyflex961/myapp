@@ -274,12 +274,10 @@ function App({
 
 
     
-<QrScannerModal
-  isOpen={isQrScannerOpen}
-  onClose={closeQrScanner}
->
-  Scan your QR code here
-</QrScannerModal>
+<QrScannerModal 
+  isOpen={isQrScannerOpen} 
+  onClose={closeQrScanner} 
+/>
 
 
 
