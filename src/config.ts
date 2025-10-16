@@ -19,9 +19,9 @@ export const APP_ENV = process.env.APP_ENV;
 export const IS_CORE_WALLET = false;  // core wallet disable
 
 
-export const APP_NAME = 'Dps Wallet'; // single name constant
+//export const APP_NAME = 'Dps Wallet'; // single name constant
 
-//export const APP_NAME = process.env.APP_NAME || (IS_CORE_WALLET ? 'TON Wallet' : 'Dps Wallet');
+export const APP_NAME = process.env.APP_NAME || (IS_CORE_WALLET ? 'Dps Wallet' : 'Dps Wallet');
 
 
 export const APP_VERSION = process.env.APP_VERSION!;
