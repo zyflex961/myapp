@@ -271,14 +271,15 @@ function App({
           <UnhideNftModal />
           <NftAttributesModal />
 
+                    <QrScannerModal 
+           isOpen={isQrScannerOpen} 
+           onClose={closeQrScanner} 
+          />
 
 
 
-// ✅ enabled code
-<QrScannerModal
-  isOpen={isQrScannerOpen}
-  onClose={closeQrScanner}
-/>
+
+
 
 
 
