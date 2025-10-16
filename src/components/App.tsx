@@ -274,19 +274,11 @@ function App({
 
 
 
-// ✅ نیا فعال (enabled) code
+// ✅ enabled code
 <QrScannerModal
   isOpen={isQrScannerOpen}
   onClose={closeQrScanner}
 />
-
-// ❌ old QR Scanner 
-// {IS_CAPACITOR && (
-//   <QrScannerModal
-//     isOpen={isQrScannerOpen}
-//     onClose={closeQrScanner}
-//   />
-// )}
 
 
 
