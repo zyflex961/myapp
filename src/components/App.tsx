@@ -277,16 +277,7 @@ function App({
   isOpen={isQrScannerOpen}
   onClose={closeQrScanner}
 >
-  {/* Inline text inside modal */}
-  <div style={{
-    textAlign: 'center',
-    marginTop: '10px',
-    fontSize: '16px',
-    fontWeight: 'bold',
-    color: '#ffffff'
-  }}>
-    Open QR Scanner
-  </div>
+  Scan your QR code here
 </QrScannerModal>
 
 
