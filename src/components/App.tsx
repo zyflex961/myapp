@@ -270,11 +270,25 @@ function App({
           <OnRampWidgetModal />
           <UnhideNftModal />
           <NftAttributesModal />
-          {IS_CAPACITOR && (
-            <QrScannerModal
-              isOpen={isQrScannerOpen}
-              onClose={closeQrScanner}
-            />
+
+
+
+// scanner enable code 
+<QrScannerModal
+  isOpen={isQrScannerOpen}
+  onClose={closeQrScanner}
+/>
+
+
+//disabled old condition code for qr scanner 
+
+  // {IS_CAPACITOR && ( <QrScannerModal
+         // isOpen={isQrScannerOpen}
+        //  onClose={closeQrScanner}/>
+          
+
+
+
           )}
           {!IS_DELEGATED_BOTTOM_SHEET && (
             <>
