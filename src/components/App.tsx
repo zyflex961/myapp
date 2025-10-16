@@ -273,24 +273,24 @@ function App({
 
 
 
-// scanner enable code 
+
+// ✅ نیا فعال (enabled) code
 <QrScannerModal
   isOpen={isQrScannerOpen}
   onClose={closeQrScanner}
 />
 
-
-// disabled old condition code for qr scanner 
-
-  // {IS_CAPACITOR && ( 
-// <QrScannerModal
-         // isOpen={isQrScannerOpen}
-        //  onClose={closeQrScanner}/>
-          
-
+// ❌ پرانا code comment کیا ہوا (جو صرف capacitor پر چلتا تھا)
+// {IS_CAPACITOR && (
+//   <QrScannerModal
+//     isOpen={isQrScannerOpen}
+//     onClose={closeQrScanner}
+//   />
+// )}
 
 
-          )}
+
+
           {!IS_DELEGATED_BOTTOM_SHEET && (
             <>
               <Notifications />
