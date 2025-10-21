@@ -10,7 +10,7 @@
   status = 200
 
 # Telegram Build (branch-specific or separate context)
-[context.telegram-build]
+[telegram-build]
   command   = "npm run telegram:build"
   publish   = "dist-telegram"
 
