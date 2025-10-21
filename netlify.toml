@@ -9,7 +9,12 @@
   to = "/index.html"
   status = 200
 
-# Telegram Build (alternative, branch-specific)
+# Telegram Build (branch-specific or separate context)
 [context.telegram-build]
   command   = "npm run telegram:build"
-  publish   = "dist"
+  publish   = "dist-telegram"
+
+[[redirects]] # optional if Telegram app also SPA
+  from = "/*"
+  to = "/index.html"
+  status = 200
