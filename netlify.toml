@@ -1,20 +1,3 @@
-# Default Build (React / Vite main app)
 [build]
-  command   = "npm run build"
-  publish   = "dist"
+  publish = "public"
   functions = "netlify/functions"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-# Telegram Build (branch-specific or separate context)
-[telegram-build]
-  command   = "npm run telegram:build"
-  publish   = "dist-telegram"
-
-[[redirects]] # optional if Telegram app also SPA
-  from = "/*"
-  to = "/index.html"
-  status = 200
