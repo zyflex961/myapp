@@ -1,3 +1,4 @@
+// src/components/swap/SwapInitial.tsx
 import React, {
   memo, useEffect, useMemo, useRef, useState,
 } from '../../lib/teact/teact';

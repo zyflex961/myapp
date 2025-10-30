@@ -1,3 +1,4 @@
+// src/components/swap/SwapSettingsModal.tsx
 import type { TeactNode } from '../../lib/teact/teact';
 import React, { memo, useMemo, useState } from '../../lib/teact/teact';
 import { getActions, withGlobal } from '../../global';

@@ -73,9 +73,8 @@
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 1.125rem;
-  color: var(--color-activity-gray-text);
-
-  background-color:  var(--color-activity-gray-background);
+  color: #00050c;
+  background-color: #f3d7ea;
 
   @include mixins.is-mobile() {
     font-size: 0.815rem;
@@ -119,7 +118,7 @@
   position: absolute;
   width: 100%;
   text-align: center;
-  background: #f9f7f7ad;
+  background: rgb(233 233 233 / 36%)
 }
 
 .listGroup {

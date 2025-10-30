@@ -1,3 +1,4 @@
+// src/components/swap/SwapComplete.tsx
 import React, { memo } from '../../lib/teact/teact';
 
 import type { SwapType, UserSwapToken } from '../../global/types';

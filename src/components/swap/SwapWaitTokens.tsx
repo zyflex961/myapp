@@ -1,3 +1,4 @@
+// src/components/swap/SwapWaitTokens.tsx
 import React, { memo, useMemo, useState } from '../../lib/teact/teact';
 
 import type { ApiActivity } from '../../api/types';

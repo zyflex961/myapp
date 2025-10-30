@@ -1,3 +1,4 @@
+// src/components/swap/SwapModal.tsx
 import React, {
   memo, useEffect, useMemo, useState,
 } from '../../lib/teact/teact';

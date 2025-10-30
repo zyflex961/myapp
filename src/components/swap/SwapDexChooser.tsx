@@ -1,3 +1,4 @@
+// src/components/swap/SwapDexChooser.tsx
 import type { TeactNode } from '../../lib/teact/teact';
 import React, { memo, useMemo, useState } from '../../lib/teact/teact';
 import { getActions, withGlobal } from '../../global';
@@ -224,6 +225,7 @@ function SwapDexChooser({
         >
           {buttonContent}
         </button>
+        
         <Modal
           isOpen={isModalOpen}
           isCompact

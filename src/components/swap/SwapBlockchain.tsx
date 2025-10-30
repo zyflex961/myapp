@@ -1,3 +1,4 @@
+// src/components/swap/SwapBlockchain.tsx
 import type { TeactNode } from '../../lib/teact/teact';
 import React, {
   memo, useEffect, useRef, useState,

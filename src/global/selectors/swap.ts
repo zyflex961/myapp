@@ -186,6 +186,8 @@ export function selectSwapType(global: GlobalState) {
 
   if (tokenInChain === 'ton' && tokenOutChain === 'ton') {
     return SwapType.OnChain;
+
+  
   }
 
   const byChain = selectCurrentAccount(global)?.byChain ?? {};
