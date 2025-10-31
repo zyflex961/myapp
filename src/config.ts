@@ -118,8 +118,7 @@ export const ELECTRON_TONCENTER_TESTNET_KEY = process.env.ELECTRON_TONCENTER_TES
 export const TONAPIIO_TESTNET_URL = process.env.TONAPIIO_TESTNET_URL || 'https://testnet.tonapi.io';
 
 export const BRILLIANT_API_BASE_URL =process.env.BRILLIANT_API_BASE_URL || 'https://walletdps.netlify.app/.netlify/functions/proxy';
-
-export const PROXY_API_BASE_URL = process.env.PROXY_API_BASE_URL || 'https://walletdps.netlify.app';
+export const PROXY_API_BASE_URL = process.env.PROXY_API_BASE_URL || 'https://walletdps.netlify.app/.netlify/functions/proxy';
 
 export const IPFS_GATEWAY_BASE_URL = 'https://ipfs.io/ipfs/';
 
