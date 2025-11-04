@@ -24,13 +24,20 @@ http://t.me/DPSwallet_bot/?startapp
 
 User Interface for the DPS wallet Giveaways APP. This app will help the user complete their task.
 
-this app is under developing 
+**this app is under developing**
 .
 
 
 ## Environment Setup
 
 To run the app, you need to define the following variables in the `.env` file:
+
+
+```gitbash 
+npm run dev 
+```
+
+
 
 # Development Mode
 To start the app in development mode, run:
