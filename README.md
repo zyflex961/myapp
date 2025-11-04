@@ -19,11 +19,13 @@ http://t.me/DPSwallet_bot/?startapp
  http://t.me/zyflex
 
 
-- **Environment Setup**
+- **Environment Setup** 
+
 To run the app, you need to define the following variables in the `.env` file:
 
 
-_local development commands_
+- **🖥️ local development commands**
+
 ```
 npm run dev 
 ```
