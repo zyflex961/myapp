@@ -6,13 +6,13 @@ The wallet is **self-custodial and safe**. The developers **do not** have access
 App links for
 🌐 https://walletdps.netlify.app
 
-#  🤖 wallet bot 
+-  🤖 wallet bot 
 http://t.me/DPSwallet_bot/?startapp
 
-# 👉 wallet bot channel
+- 👉 wallet bot channel
 🪩 https://t.me/dps_wallets
 
-💎 If you need help contact us.
+- 💎 If you need help contact us.
  http://t.me/zyflex
 
 
