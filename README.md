@@ -1,4 +1,4 @@
-## 🪙 [TON TRC20](https://walletdps.netlify.app)
+## 🪙 [TON and TRX Wallet](https://walletdps.netlify.app)
 
 The wallet is **self-custodial and safe**. The developers **do not** have access to funds, browser history or any other information. We focus on **speed**, **size** and **attention to detail**. We try to avoid using third-party libraries to ensure maximum reliability and safety, and also to lower the bundle size.
 
@@ -24,19 +24,21 @@ http://t.me/DPSwallet_bot/?startapp
 To run the app, you need to define the following variables in the `.env` file:
 
 
-- **🖥️ local development commands**
+- **🌐local development commands**
 
 ```
 npm run dev 
 ```
+npm run build
 
-** for developing outputb dist
+
+
+
+- 💻 For developing outputb dist
 
 ```
 npm run build
 ```
-
-
 
 
 - 💰 **MyTonWallet Giveaway**
