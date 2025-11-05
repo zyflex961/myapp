@@ -43,7 +43,7 @@ npm run build
 ```
 
 
-# 💰 **Giveaway Command**
+# 🎁 **Giveaway App**
 
 User Interface for the DPS wallet Giveaways APP. This app will help the user complete their task.
 
@@ -51,7 +51,7 @@ User Interface for the DPS wallet Giveaways APP. This app will help the user com
 
 
 
-# Development Mode
+-  Development Mode
 To start the app in development mode, run:
 
 ```sh
@@ -63,7 +63,7 @@ npm run giveaways:dev
 npm run giveaways:build
 ```
 
-### Build in Development Mode To build the app in development mode, run:
+- Build in Development Mode To build the app in development mode, run:
 
 ```sh
 npm run giveaways:build:dev
