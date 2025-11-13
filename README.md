@@ -20,19 +20,12 @@ http://t.me/DPSwallet_bot/?startapp
 
 
 - **Environment Setup** 
-
 To run the app, you need to define the following variables in the `.env` file:
-
-
-
 
 - **🌐 local development commands**
 
-```
 npm run dev 
-```
 npm run build
-
 
 
 
@@ -41,7 +34,8 @@ npm run build
 ```
 npm run build
 ```
-
+# @push telegram bot
+this app is under developing 
 
 # 🎁 **Giveaway App**
 
@@ -67,4 +61,6 @@ npm run giveaways:build
 
 ```sh
 npm run giveaways:build:dev
+
+
 ```
